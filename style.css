@@ -9,11 +9,12 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    align-items: center;
 }
 
-/* Button Groups (optional if you wrap filters/sorts in divs) */
-.filter-buttons,
-.sort-buttons {
+/* Button Groups */
+.filters,
+.sorts {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -47,11 +48,72 @@
     transform: translateY(-1px);
 }
 
+/* Search Bar */
+.search-container {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#search-input {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 250px;
+    transition: all 0.25s ease;
+}
+
+#search-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+#search-clear {
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.25s ease;
+}
+
+#search-clear:hover {
+    background-color: #c0392b;
+}
+
+/* Recipe Counter */
+#recipe-counter {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
-    .controls button {
+    .controls {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    #search-input {
         width: 90%;
-        max-width: 250px;
-        margin: 0.3rem 0;
+        max-width: 300px;
+    }
+
+    .filters,
+    .sorts {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #search-clear {
+        padding: 0.4rem 0.6rem;
     }
 }
