@@ -16,12 +16,37 @@
 
     <!-- Main Content -->
     <main>
+
+        <!-- Controls Section (NEW - Part 2) -->
+        <section class="controls">
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">Show All</button>
+                <button data-filter="easy">Easy</button>
+                <button data-filter="medium">Medium</button>
+                <button data-filter="hard">Hard</button>
+                <button data-filter="quick">Quick (Under 30 min)</button>
+            </div>
+
+            <!-- Sort Buttons -->
+            <div class="sort-buttons">
+                <button data-sort="none" class="active">Default Order</button>
+                <button data-sort="name">Name (A-Z)</button>
+                <button data-sort="time">Time (Fastest First)</button>
+            </div>
+
+        </section>
+
+        <!-- Recipe Container -->
         <div id="recipe-container">
             <!-- Recipe cards will be rendered here by JavaScript -->
         </div>
+
     </main>
 
     <!-- JavaScript File -->
     <script src="app.js"></script>
+
 </body>
 </html>
