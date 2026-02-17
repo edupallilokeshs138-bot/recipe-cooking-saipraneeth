@@ -3,47 +3,55 @@
 /* ============================= */
 
 .controls {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
-/* Button Groups */
+/* Button Groups (optional if you wrap filters/sorts in divs) */
 .filter-buttons,
 .sort-buttons {
-    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
 }
 
 /* Base Button Style */
 .controls button {
-    padding: 0.6rem 1rem;
-    margin: 0.4rem;
+    padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 25px;
     background-color: #e0e0e0;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 /* Hover Effect */
 .controls button:hover {
     background-color: #667eea;
-    color: white;
+    color: #fff;
     transform: translateY(-2px);
 }
 
 /* Active Button */
 .controls button.active {
     background-color: #667eea;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
 }
 
 /* Responsive */
 @media (max-width: 600px) {
     .controls button {
         width: 90%;
-        max-width: 300px;
+        max-width: 250px;
+        margin: 0.3rem 0;
     }
 }
